@@ -2,7 +2,7 @@
   <div class="grid grid-cols-3">
     <div>
       <a href="/" class="text-secondary-900 hover:text-primary-500">
-        <span class="material-icons text-4xl">home</span>
+        <span class="material-icons icon-responsive">home</span>
       </a>
     </div>
     <div class="font-bold text-center text-secondary-600">
@@ -16,7 +16,7 @@
         type="button"
         @click.prevent="getPage(prev)"
       >
-        <span class="material-icons text-4xl">navigate_before</span>
+        <span class="material-icons icon-responsive">navigate_before</span>
       </button>
       <button
         disabled
@@ -34,7 +34,7 @@
         type="button"
         @click.prevent="getPage(next)"
       >
-        <span class="material-icons text-4xl">navigate_next</span>
+        <span class="material-icons icon-responsive">navigate_next</span>
       </button>
     </div>
   </div>

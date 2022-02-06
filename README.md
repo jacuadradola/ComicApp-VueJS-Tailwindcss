@@ -1,4 +1,4 @@
-# VueJS-3-Tailwind
+# VueJS-3-Tailwindcss
 
 Proyecto en Vue.js 3 con Tailwindcss y se consume los datos de [RickAndMortyapi.com](https://rickandmortyapi.com/graphql). 
 
