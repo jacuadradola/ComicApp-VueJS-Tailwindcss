@@ -1,9 +1,9 @@
 <template>
   <div class="grid grid-cols-3">
     <div>
-      <a href="/" class="text-secondary-900 hover:text-primary-500">
+      <router-link to="/" class="text-secondary-900 hover:text-primary-500">
         <span class="material-icons icon-responsive">home</span>
-      </a>
+      </router-link>
     </div>
     <div class="font-bold text-center text-secondary-600">
       <h3>{{ text }}</h3>

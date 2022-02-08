@@ -1,14 +1,11 @@
 <template>
-  <Banner :text="title" :prev="prev" :next="next" @getEvent="getEvent" />
   <main v-if="dataResult.length > 0 && !loading">
+    <Banner :text="title" :prev="prev" :next="next" @getEvent="getEvent" />
     <TidySelect @getShortBy="getOrderBySelect" />
-    <Character :dataResult="dataResult" />
+    <CharacterSingle :dataResult="dataResult" />
   </main>
-  <main v-else class="flex flex-col align-center justify-center text-center">
-    <div class="text-secondary-900 text-3xl mt-10 mb-6">
-      Cargando información
-    </div>
-    <img :src="loadingImage" class="w-24 m-auto" />
+  <main v-else>
+    <Loading />
   </main>
 </template>
 
@@ -17,8 +14,9 @@ import ApiService from "@/services/api.service";
 
 /* Import components */
 import Banner from "@/components/Banner";
-import Character from "@/components/Character";
+import CharacterSingle from "@/components/CharacterSingle";
 import TidySelect from "@/components/TidySelect";
+import Loading from "@/components/Loading";
 
 export default {
   name: "Pagination",
@@ -27,7 +25,6 @@ export default {
       title: "Characters",
       order: "",
       loading: true,
-      loadingImage: require("../assets/loading.gif"),
       pages: true,
       count: null,
       allPages: null,
@@ -41,7 +38,8 @@ export default {
   components: {
     Banner,
     TidySelect,
-    Character,
+    CharacterSingle,
+    Loading,
   },
   methods: {
     async getResources() {

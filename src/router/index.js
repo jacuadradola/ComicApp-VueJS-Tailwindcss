@@ -1,8 +1,13 @@
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+
+/*  Import views */
 import Home from "../views/Home.vue";
 import Characters from "@/views/Characters.vue";
 import Locations from "@/views/Locations.vue";
 import Episodes from "@/views/Episodes.vue";
+import CharacterDetails from "@/views/CharacterDetails";
+
+/* Import Components */
 
 const routes = [
   {
@@ -14,6 +19,12 @@ const routes = [
     path: "/character",
     name: "Characters",
     component: Characters,
+  },
+  {
+    path: "/character/:id",
+    name: "CharacterDetails",
+    component: CharacterDetails,
+    props: true
   },
   {
     path: "/location",
@@ -28,7 +39,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
