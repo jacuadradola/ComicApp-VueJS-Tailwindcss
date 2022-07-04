@@ -1,27 +1,15 @@
 # VueJS-3-Tailwindcss
 
-Proyecto en Vue.js 3 con Tailwindcss y se consume los datos de [RickAndMortyapi.com](https://rickandmortyapi.com/graphql). 
+Proyecto en Vue.js 3 con Tailwindcss, consume los datos de [RickAndMortyapi.com](https://rickandmortyapi.com/graphql). 
 
-## Steps to run the project 🚀
+## Pasos para ejecutar el proyecto
 
-Clone the repository
-```
-git clone https://github.com/jcuadradol/vuejs3_tailwindcss.git
-```
-
-Enter the project folder
-```
-cd vuejs3_tailwindcss
-```
-
-Project setup
+Instalación de dependencias
 ```
 npm install
 ```
 
-Compiles and hot-reloads for development
+Compilado y ejecución en desarrollo
 ```
 npm run serve
 ```
-
-The development server will run at http://localhost:8080/
